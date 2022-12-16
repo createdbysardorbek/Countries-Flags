@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,800;1,400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #202C36;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+input {
+    border: 0;
+    outline: 0;
+}
+
+ul {
+    padding: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+@mixin forFonts($foWeight, $foSize, $color) {
+    font-weight: $foWeight;
+    font-size: $foSize;
+    color: $color;
+}

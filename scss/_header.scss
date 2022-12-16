@@ -1,0 +1,39 @@
+header {
+    width: 100%;
+    background-color: #2B3844;
+    padding: 24px 0;
+    margin-bottom: 48px;
+
+    .header__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content__info {
+            h1 {
+                @include forFonts(800, 24px, #fff);
+                margin: 0;
+            }
+        }
+
+        .content__nav {
+            span {
+                display: flex;
+                align-items: center;
+                @include forFonts(600, 16px, #fff);
+
+                svg {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    header {
+        .header__content {
+            width: 100%;
+        }
+    }
+}
