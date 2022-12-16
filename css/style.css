@@ -135,13 +135,14 @@ header .header__content .content__nav span svg {
   margin-left: 49px;
 }
 .search__filter .filter .menu {
+  width: 214px;
   display: block;
-  width: 100%;
+  position: absolute;
+  z-index: 999;
   background: #2B3844;
   -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
           box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
-  margin-top: -12px;
 }
 .search__filter .filter .menu ul li {
   font-weight: 400;
@@ -156,6 +157,7 @@ header .header__content .content__nav span svg {
 @media only screen and (max-width: 1280px) {
   .search__filter {
     width: 100%;
+    margin-left: 16px;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -164,10 +166,71 @@ header .header__content .content__nav span svg {
     row-gap: 40px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 16px;
   }
   .search__filter .search {
     margin: 0 auto;
     width: 95%;
+  }
+}
+.countries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 67px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 45px;
+}
+.countries article {
+  width: 267px;
+  background: #2B3844;
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.countries article img {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.countries article .name {
+  padding-left: 24px;
+  font-weight: 800;
+  font-size: 18;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.countries article ul {
+  padding-left: 24px;
+}
+.countries article ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.countries article ul li:last-child {
+  padding-bottom: 46px;
+}
+.countries article ul li {
+  font-weight: 600;
+  font-size: 14;
+  color: rgba(255, 255, 255, 0.717);
+}
+.countries article ul li span {
+  color: white;
+}
+
+@media only screen and (max-width: 1285px) {
+  .countries {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 70px;
+       -moz-column-gap: 70px;
+            column-gap: 70px;
+    margin-left: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
