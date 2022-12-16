@@ -64,6 +64,9 @@ header .header__content .content__nav span svg {
 }
 
 @media only screen and (max-width: 1280px) {
+  header {
+    padding: 16px;
+  }
   header .header__content {
     width: 100%;
   }
@@ -148,4 +151,23 @@ header .header__content .content__nav span svg {
 }
 .search__filter .filter .menu ul li:last-child {
   padding-bottom: 16px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .search__filter {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .search__filter {
+    width: 100%;
+    row-gap: 40px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 16px;
+  }
+  .search__filter .search {
+    margin: 0 auto;
+    width: 95%;
+  }
 }/*# sourceMappingURL=style.css.map */
