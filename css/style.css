@@ -81,31 +81,37 @@ header .header__content .content__nav span svg {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 48px;
 }
 .search__filter .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-left: 32px;
   -ms-flex-item-align: start;
       align-self: flex-start;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background-color: #2B3844;
   -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
           box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
+  background-color: #2B3844;
 }
-.search__filter .search label {
+.search__filter .search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 440px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2B3844;
+}
+.search__filter .search form label {
   margin-right: 24px;
 }
-.search__filter .search input {
-  width: 440px;
+.search__filter .search form input {
+  width: 100%;
   background-color: #2B3844;
   -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
           box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
@@ -157,19 +163,26 @@ header .header__content .content__nav span svg {
 @media only screen and (max-width: 1280px) {
   .search__filter {
     width: 100%;
+    gap: 50px;
     margin-left: 16px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 621px) {
   .search__filter {
     width: 100%;
-    row-gap: 40px;
+    gap: 50px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .search__filter .search {
     margin: 0 auto;
     width: 95%;
+  }
+  .search__filter .search form {
+    width: 100%;
+  }
+  .search__filter .search form input {
+    width: 100%;
   }
 }
 .countries {
@@ -220,6 +233,9 @@ header .header__content .content__nav span svg {
 
 @media only screen and (max-width: 1285px) {
   .countries {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;

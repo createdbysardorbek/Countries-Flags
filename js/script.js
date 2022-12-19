@@ -1,5 +1,5 @@
 class CountriesService {
-    _urlBase = 'https://restcountries.com/v2/all?fields=name,capital,region,population,flags';
+    _urlBase = 'countries.json';
 
     getResource = async () => {
         let res = await fetch(this._urlBase)
@@ -61,8 +61,6 @@ function some(num) {
 
 getData()
 
-// Filter 
-
 let filter = document.querySelector('.filter');
 let menu = document.querySelector('.menu');
 
@@ -82,4 +80,22 @@ menu.addEventListener('click', (e) => {
     })
 })
 
+let inpValue = document.querySelector('#search');
 
+function showSingleCountry(e) {
+    e.preventDefault();
+    let names = inpValue.value;
+    countriesService.getResource().then(data => {
+        let finder = data.find(elem => elem.name.includes(names));
+        return finder;
+    }).then((data) => {
+        wrapper.innerHTML = '';
+        renderTask(data);
+        inpValue.value = '';
+    }).catch(() => {
+        wrapper.innerHTML = '';
+        wrapper.innerHTML = `<h2 style="color: white;">Country not found.</h2>`
+    })
+}
+
+document.querySelector('form').addEventListener('submit', showSingleCountry)
