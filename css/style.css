@@ -186,11 +186,19 @@ header .header__content .content__nav span svg {
   }
 }
 .countries {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 75px;
+  padding-bottom: 45px;
 }
 .countries .item {
+  width: 260px;
   background: #2B3844;
   -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
           box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
