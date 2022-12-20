@@ -1,3 +1,5 @@
+// ======================
+// class for giving request to api and displaying some countries
 class CountriesService {
     _urlBase = 'countries.json';
 
@@ -17,9 +19,15 @@ class CountriesService {
     }
 }
 
+// ======================
+// Choosing parent element in html to add country cards
+
 let wrapper = document.querySelector('.countries')
 
 let countriesService = new CountriesService()
+
+// =====================
+// Function displays given amount of countries
 
 function getData() {
     countriesService.getSomeCountries(48).then(data => {
@@ -28,6 +36,9 @@ function getData() {
         });
     })
 }
+
+// ======================
+// Adding country cards from received api
 
 function renderTask(elem) {
     let { name, region, capital, population, flags } = elem
@@ -55,14 +66,23 @@ function renderTask(elem) {
         `
 }
 
+// ======================
+// Making population numbers more readible
+
 function some(num) {
     return String(num).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1,')
 }
 
 getData()
 
+// =======================
+// Choosing drop-down menu 
+
 let filter = document.querySelector('.filter');
 let menu = document.querySelector('.menu');
+
+// =======================
+// Giving client events to drop-down menus 
 
 filter.addEventListener('mouseover', () => menu.style.display = 'block');
 filter.addEventListener('mouseout', () => menu.style.display = 'none');
@@ -80,7 +100,13 @@ menu.addEventListener('click', (e) => {
     })
 })
 
+// =======================
+// Choosing searching input
+
 let inpValue = document.querySelector('#search');
+
+// =======================
+// Function displays searched country
 
 function showSingleCountry(e) {
     e.preventDefault();
@@ -98,4 +124,7 @@ function showSingleCountry(e) {
     })
 }
 
-document.querySelector('form').addEventListener('submit', showSingleCountry)
+// =======================
+// Choosing form and giving client event 
+
+document.querySelector('form').addEventListener('submit', showSingleCountry);

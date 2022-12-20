@@ -25,6 +25,10 @@ ul li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   width: 100%;
   background-color: #2B3844;

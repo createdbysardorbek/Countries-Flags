@@ -26,6 +26,10 @@ ul {
     }
 }
 
+a {
+    text-decoration: none;
+}
+
 @mixin forFonts($foWeight, $foSize, $color) {
     font-weight: $foWeight;
     font-size: $foSize;
