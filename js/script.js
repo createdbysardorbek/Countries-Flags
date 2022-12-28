@@ -34,6 +34,7 @@ loading.innerHTML = `
 	<img src="img/loading.svg" alt="" />
 `
 loading.style.cssText = `
+    position: absolute;
 	display:flex;
 	align-items: center;
 	justify-content: center;
