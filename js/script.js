@@ -26,6 +26,23 @@ let wrapper = document.querySelector('.countries')
 
 let countriesService = new CountriesService()
 
+// ======================
+// Loading
+
+let loading = document.createElement("div")
+loading.innerHTML = `
+	<img src="img/loading.svg" alt="" />
+`
+loading.style.cssText = `
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: #202C36;
+`
+document.body.prepend(loading)
+
 // =====================
 // Function displays given amount of countries
 
@@ -35,6 +52,7 @@ function getData() {
             renderTask(elem)
         });
     })
+        .then(() => loading.style.display = 'none')
 }
 
 // ======================
