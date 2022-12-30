@@ -1,7 +1,7 @@
 // ======================
 // class for giving request to api and displaying some countries
 class CountriesService {
-    _urlBase = 'countries.json';
+    _urlBase = 'https://countries-flags-7777.netlify.app/countries.json';
 
     getResource = async () => {
         let res = await fetch(this._urlBase)
